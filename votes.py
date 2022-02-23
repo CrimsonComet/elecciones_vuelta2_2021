@@ -69,12 +69,12 @@ distrital_limits['absenteeism'] = votes_by_district['absenteeism']
 
 fig, ax = plt.subplots(1, figsize=(15,18), facecolor='lightblue')
 plt.title('Distribución espacial por distritos de los\nvotos de la 2a vuelta presidencial 2021\n-1: 100% Fuerza Popular; +1: 100% Perú Libre', fontsize=20)
-distrital_limits.plot(ax=ax, column = 'rate', cmap='seismic')
+distrital_limits.plot(ax=ax, column = 'rate', cmap='coolwarm')
 ax.set_xlabel('Longitud', fontsize = 13)
 ax.set_ylabel('Latitud', fontsize = 13)
 min_p = min(distrital_limits['rate'])
 max_p = max(distrital_limits['rate'])
-bar = plt.cm.ScalarMappable(cmap='seismic', norm = plt.Normalize(vmin = -1, vmax = 1))
+bar = plt.cm.ScalarMappable(cmap='coolwarm', norm = plt.Normalize(vmin = -1, vmax = 1))
 
 bar._A = []
 cax = plt.axes([0.85, 0.15, 0.03, 0.7])
